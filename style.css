@@ -1,7 +1,8 @@
 .container {
+  margin-top: 30px;
   display: grid;
   grid-gap: 25px;
-  grid-template-columns: 50px 50px 50px 50px 50px;
+  grid-template-columns: repeat(5, 50px);
   grid-template-rows: 50px 50px 50px 50px 50px;
   justify-content: center;
 }
@@ -10,4 +11,44 @@
   background-color: lightgrey;
   border-radius: 50%;
   justify-content: center;
+}
+
+.legend {
+  position: absolute;
+  top: 450px;
+  left: 520px;
+  height: 50px;
+  width: 300px;
+}
+
+.button {
+  background: no-repeat
+    linear-gradient(hotpink, orange, yellow, lawngreen, skyblue, violet);
+  font-size: 20px;
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.box {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 20px;
+  width: 40px;
+  border: 1px solid #000;
+  margin-left: 20px;
+}
+.palette {
+  margin-top: 70px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(5, 50px);
+  justify-content: center;
+}
+.color-option {
+  width: 20px;
+  height: 20px;
+  background-color: lawngreen;
+  border-radius: 2px;
 }
