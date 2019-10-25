@@ -1,3 +1,6 @@
+body {
+  background-color: #56565d;
+}
 .container {
   margin-top: 30px;
   display: grid;
@@ -8,7 +11,7 @@
 }
 
 .item {
-  background-color: lightgrey;
+  background-color: #787a84;
   border-radius: 50%;
   justify-content: center;
 }
@@ -40,11 +43,17 @@
   margin-left: 20px;
 }
 .palette {
-  margin-top: 70px;
+  margin-left: -70px;
+  width: 250px;
+  height: 10px;
+  padding: 30px;
+  background-color: #9999996c;
+  margin-top: -200px;
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(5, 50px);
   justify-content: center;
+  transform: rotate(90deg);
 }
 .color-option {
   width: 20px;

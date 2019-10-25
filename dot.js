@@ -1,11 +1,11 @@
 // 1 Get "dots"
 // 2 Loop through children of "dots"
 // 3 Add Event Listener in the loop to each chid
-//5ff
+//
 
 (function() {
-  //debugger;
-  let selectedColor = "fuchsia";
+  let selectedColor = "#ff4abb";
+
   init();
   makeColorPalette();
 
@@ -16,32 +16,29 @@
       dotties.addEventListener("click", changeColor);
     }
   }
-
   function makeColorPalette() {
-    var palette = document.getElementById("palette");
-    var daColors = ["red", "orange", "yellow", "lawngreen", "skyblue"];
+    //1.Change color of the palette's children
+    //2.Add an event listener
+    //3.Save the color in a variable
+    //4.
+    let palette = document.getElementById("palette");
+    let daColors = ["#ff4abb", "#ffaa00", "#deff00", "#00ff25", "#00e2ff"];
     for (let i = 0; i < palette.children.length; i++) {
-      var colorOptions = palette.children[i];
-      colorOptions.style.backgroundColor = daColors[i];
-      colorOptions.addEventListener("click", setColor);
+      let box = palette.children[i];
+      box.style.backgroundColor = daColors[i];
+      box.addEventListener("click", setColor);
     }
   }
-
   function setColor(e) {
     selectedColor = e.target.style.backgroundColor;
   }
 
   function changeColor(e) {
-    e.target.style.backgroundColor = selectedColor;
-  }
-
-  function nextColor() {
-    let letters = ["a", "b", "c", "d", "e", "f", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      let randomLetter = letters[Math.floor(Math.random() * letters.length)];
-      color += randomLetter;
+    var dotColor = e.target.style.backgroundColor;
+    if (dotColor == selectedColor) {
+      e.target.style.backgroundColor = "#787a84";
+    } else {
+      e.target.style.backgroundColor = selectedColor;
     }
-    return color;
   }
 })();
